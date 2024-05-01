@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url("clockiii.jpg")
+    }
+    h1{
+        text-align: center;
+        font-size: 180px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: white;
+
+    }
+</style>
+<body>
+   <center> <h1>DEMO</h1></center>
+</body>
+<script>
+    function demo(){
+        let date = new Date();
+        let hours = date.getHours();
+        let minutes = date.getMinutes();
+        let seconds = date.getSeconds();
+        let time = hours + " : " + minutes + " : " + seconds;
+       if(hours > 12){
+        hours = hours - 12
+       }
+
+        document.querySelector("h1").innerText = time;
+
+        setTimeout(demo,1000)
+    }
+    window.addEventListener("load" ,function(){
+        demo()
+    })
+</script>
+</html>
